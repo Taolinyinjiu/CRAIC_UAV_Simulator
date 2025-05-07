@@ -1,0 +1,58 @@
+<sdf version='1.7'>
+  <model name='test'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.998366 -2.98877 -2.93203 0 -0 0</pose>
+        <mass>830.341</mass>
+        <inertia>
+          <ixx>1258.32</ixx>
+          <ixy>0.499868</ixy>
+          <ixz>-133.69</ixz>
+          <iyy>1219.44</iyy>
+          <iyz>1.3748</iyz>
+          <izz>918.72</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://test/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__link1_collision_1'>
+        <pose>0 0.01 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://test/meshes/link1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://test/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__link1_visual_1'>
+        <pose>0 0.01 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://test/meshes/link1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <frame name='joint1' attached_to='base_link'>
+      <pose>0 0.01 0 1.5708 -0 0</pose>
+    </frame>
+    <frame name='link1' attached_to='joint1'/>
+  </model>
+</sdf>

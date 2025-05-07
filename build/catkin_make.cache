@@ -1,0 +1,2 @@
+test
+-DCATKIN_DEVEL_PREFIX=/home/taolin/Documents/GitHub/CRAIC_UAV_Simulator/devel -DCMAKE_INSTALL_PREFIX=/home/taolin/Documents/GitHub/CRAIC_UAV_Simulator/install -G Unix Makefiles
