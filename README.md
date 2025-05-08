@@ -4,7 +4,10 @@ Hello, this Github repository is 2025 CRAIC micro UAV Competition GAZEBO simulat
 # How To Use It
 first, you should clone this repositoty to your ros workspace like catkin_ws, and then compileted ,and finally try to use it .
 by the way.this repository only world and not have UAV ,also not have PX4,QGC and so on,just a basic and perfect environment to mapping or try some thinks.
-
+however , I forget that you need set gazebo model path
+```
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/your_path/CRAIC_UAV_Simulator/src/CRAIC/models
+```
 # TODO
 1. add UAV models
 2. link PX4 launch 
