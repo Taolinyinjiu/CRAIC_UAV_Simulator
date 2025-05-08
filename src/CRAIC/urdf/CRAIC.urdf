@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="CRAIC">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="3.0295 0.0049346 -1.515"
+        rpy="0 0 0" />
+      <mass
+        value="0.027" />
+      <inertia
+        ixx="4.05E-06"
+        ixy="-1.0588E-22"
+        ixz="1.3853E-22"
+        iyy="4.05E-06"
+        iyz="2.8498E-22"
+        izz="4.05E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://CRAIC/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://CRAIC/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_on_link">
+    <inertial>
+      <origin
+        xyz="-1.2957E-06 4.5262 3.0075"
+        rpy="0 0 0" />
+      <mass
+        value="10.924" />
+      <inertia
+        ixx="0.90452"
+        ixy="-7.4343E-17"
+        ixz="1.5138E-11"
+        iyy="0.36296"
+        iyz="-1.8947E-16"
+        izz="0.54348" />
+    </inertial>
+	<static>true</static>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://CRAIC/meshes/base_on_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://CRAIC/meshes/base_on_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_on_joint"
+    type="fixed">
+    <origin
+      xyz="3.0295 1.515 -0.010065"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_on_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="up_link">
+    <inertial>
+      <origin
+        xyz="-3.01621770049587 4.50336968820548 -1.07086007939946"
+        rpy="0 0 0" />
+      <mass
+        value="808.542933859099" />
+      <inertia
+        ixx="872.029932258811"
+        ixy="0.0287616245364902"
+        ixz="0.0191744162920697"
+        iyy="782.244820374578"
+        iyz="-0.0191744163073096"
+        izz="866.008297152572" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://CRAIC/meshes/up_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://CRAIC/meshes/up_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="up_joint"
+    type="fixed">
+    <origin
+      xyz="-1.01500000000002 0 -0.0150000000000074"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="base_on_link" />
+    <child
+      link="up_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

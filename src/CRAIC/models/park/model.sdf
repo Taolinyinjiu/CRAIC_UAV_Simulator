@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="park">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.8 0.8</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://park/materials/scripts</uri>
+            <uri>model://park/materials/textures</uri>
+            <name>A_H/A_H</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

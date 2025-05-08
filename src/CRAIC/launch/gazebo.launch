@@ -1,0 +1,26 @@
+<launch>
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <node
+    name="rail"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find CRAIC)/urdf/CRAIC.urdf  -x 0 -y 1.5 -z 3.0 -R 0 -P 1.570720 -Y -3.141592 -urdf -model CRAIC"
+    output="screen" />
+  <node
+    name="boxer"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find boxer)/urdf/boxer.urdf -x 3 -y 5.8 -z 1 -R 1.570796 -P 0 -Y 0 -urdf -model boxer"
+    output="screen"/>
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+</launch>
